@@ -64,10 +64,6 @@ def fib_efficient(n):
     return value
 
 
-# d = {1:1, 2:2}
-# print(fib_efficient(6))
-# print(memo)
-
 # for i in range(1, 101):
 #     print(f'{i} : {fib_efficient(i)}')
 

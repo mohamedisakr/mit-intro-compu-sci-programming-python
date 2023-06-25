@@ -2,7 +2,7 @@
 Fibonacci sequence test cases
 """
 from unittest import TestCase
-from string_manipulation.fib import fib_efficient
+from recursion_dictionaries.fib import fib_efficient
 
 
 class TestFib(TestCase):
