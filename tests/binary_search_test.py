@@ -8,6 +8,16 @@ class TestBinarySearch(TestCase):
         # test case: empty array
         self.assertEqual(binary_search([], 5), None)
 
+    def test_lower_bound_below_min(self):
+        # test case: target is less than min value
+        arr = [2, 4, 6, 8, 10]
+        self.assertEqual(binary_search(arr, 1), None)
+
+    def test_upper_bound_above_max(self):
+        # test case: target is greater than max value
+        arr = [2, 4, 6, 8, 10]
+        self.assertEqual(binary_search(arr, 11), None)
+
     def test_single_element_array(self):
         # test case: single element array
         self.assertEqual(binary_search([5], 5), 0)
@@ -64,6 +74,31 @@ class TestBinarySearch(TestCase):
         self.assertRaises(TypeError, binary_search, None, 5)
         self.assertRaises(TypeError, binary_search, "hello", "e")
 
+    def test_odd(self):
+        arr = [0, 2, 4, 6, 8, 10, 12, 14, 16]
+        target = 9
+        self.assertEqual(binary_search(arr, target), None)
+
+    def test_duplicate_odd(self):
+        arr = [0, 2, 4, 6, 6, 8, 10, 12, 14, 16, 18]
+        target = 6
+        self.assertEqual(binary_search(arr, target), 3)
+
+    def test_duplicate_even(self):
+        arr = [0, 2, 4, 6, 6, 8, 10, 12, 14, 16]
+        target = 6
+        self.assertEqual(binary_search(arr, target), 4)
+
+
+'''
+https://www.digizol.com/2013/08/java-binary-search-recursive-testcases.html
+SortedEvenArray
+AsFirstInSortedArray
+AtEndInSortedArray
+InMiddleInSortedArray
+AnywhereInSortedArray
+SortedArray
+'''
 
 if __name__ == '__main__':
     main()
