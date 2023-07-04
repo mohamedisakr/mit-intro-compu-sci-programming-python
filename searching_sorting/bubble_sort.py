@@ -1,17 +1,3 @@
-def bubble_sort(list):
-    unsorted_until_index = len(list) - 1
-    sorted = False
-    while not sorted:
-        sorted = True
-        for i in range(unsorted_until_index):
-            if list[i] > list[i+1]:
-                list[i], list[i+1] = list[i+1], list[i]
-                sorted = False
-        unsorted_until_index -= 1
-    return list
-
-
-'''
 def bubble_sort(arr):
     if len(arr) == 0:
         return []
@@ -30,6 +16,20 @@ def bubble_sort(arr):
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
     return arr
+
+
+'''
+def bubble_sort(list):
+    unsorted_until_index = len(list) - 1
+    sorted = False
+    while not sorted:
+        sorted = True
+        for i in range(unsorted_until_index):
+            if list[i] > list[i+1]:
+                list[i], list[i+1] = list[i+1], list[i]
+                sorted = False
+        unsorted_until_index -= 1
+    return list
 '''
 
 '''
