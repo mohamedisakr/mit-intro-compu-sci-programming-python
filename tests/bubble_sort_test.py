@@ -7,6 +7,12 @@ class TestBubbleSort(TestCase):
     def test_empty_array(self):
         self.assertEqual(bubble_sort([]), [])
 
+    def test_1_element_array(self):
+        arr = [11]
+        actual = bubble_sort(arr)
+        expected = [11]
+        self.assertEqual(actual, expected)
+
     def test_small_array(self):
         arr = [65, 55, 45, 35, 25, 15, 10]
         actual = bubble_sort(arr)

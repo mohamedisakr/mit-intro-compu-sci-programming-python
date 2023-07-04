@@ -1,12 +1,12 @@
 def bubble_sort(arr):
-    if len(arr) == 0:
-        return []
+    if len(arr) == 0 or len(arr) == 1:
+        return arr
 
     if all(not isinstance(item, (int, float, str)) for item in arr):
         raise TypeError(
             f"item must be an int, float or str")  # , not {type(item)}
 
-    if len(arr) == 0:
+    if len(arr) < 2:
         return []
 
     n = len(arr)
