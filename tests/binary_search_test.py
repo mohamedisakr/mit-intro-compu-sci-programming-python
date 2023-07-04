@@ -8,6 +8,11 @@ class TestBinarySearch(TestCase):
         # test case: empty array
         self.assertEqual(binary_search([], 5), None)
 
+    def test_simple_array(self):
+        # test case: simple array
+        arr = [5, 1, 4, 2, 8]
+        self.assertEqual(binary_search(arr, 1), None)
+
     def test_lower_bound_below_min(self):
         # test case: target is less than min value
         arr = [2, 4, 6, 8, 10]

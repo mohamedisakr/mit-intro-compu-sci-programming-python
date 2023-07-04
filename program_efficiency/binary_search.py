@@ -47,7 +47,7 @@ def binary_search(arr: list[int], target: int) -> int:
         raise TypeError(f"target must be an int, not {type(target)}")
 
     if all(not isinstance(item, int) for item in arr):
-        raise TypeError(f"item must be an int, not {type(target)}")
+        raise TypeError(f"item must be an int, not {type(item)}")
 
     # check if target value less than smallest item in the array
     if target < arr[0]:
